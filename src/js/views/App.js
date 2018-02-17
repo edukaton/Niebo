@@ -16,7 +16,7 @@ class App extends Preact.Component {
       <div>
         {
           courses.map(course => (
-            <div>{course}</div>
+            <div>{course.name}</div>
           ))
         }
       </div>
