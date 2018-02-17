@@ -1,29 +1,20 @@
 import Preact from 'preact'
 import { connect } from 'react-redux'
+import StoryChallenge from '../components/Challenges/StoryChallenge'
 
-class Challenge extends Preact.Component {
-  componentDidMount() {
-    // TODO fetch challenge
-  }
-
-  render() {
-    const { id } = this.props
-    return (
-      <div>Challenge #{id}</div>
-    )
+const Challenge = ({ type }) => {
+  switch (type) {
+    case 'type2':
+      return <StoryChallenge />
+    default:
+      return <p>No matching challenge for type: {type}</p>
   }
 }
 
 const mapStateToProps = state => ({
-  id: state.get('challengeId')
-})
-
-const mapActionsToProps = () => ({
-  actions: {
-  }
+  type: state.get('challengeType')
 })
 
 export default connect(
-  mapStateToProps,
-  mapActionsToProps
+  mapStateToProps
 )(Challenge)

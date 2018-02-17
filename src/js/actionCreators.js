@@ -23,7 +23,7 @@ export const coursePicked = id => ({
   id
 })
 
-export const challengePicked = id => ({
+export const challengePicked = challengeType => ({
   type: actions.CHALLENGE_PICKED,
-  id
+  challengeType
 })
