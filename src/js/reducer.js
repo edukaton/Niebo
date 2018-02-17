@@ -3,16 +3,25 @@ import { actions } from './constants'
 
 
 const defaultState = Map({
-  loading: false,
-  courses: List()
+  coursesLoading: false,
+  courses: List(),
+  challengesLoading: false,
+  challenges: List(),
+  courseId: null
 })
 
 const reducer = (state = defaultState, action) => {
   switch (action.type) {
     case actions.COURSES_FETCH_REQUESTED:
-      return state.set('loading', false)
+      return state.set('coursesLoading', false)
     case actions.COURSES_FETCHED:
       return state.set('courses', List(action.courses))
+    case actions.CHALLENGES_FETCH_REQUESTED:
+      return state.set('challengesLoading', true)
+    case actions.CHALLENGES_FETCHED:
+      return state.set('challenges', List(action.challenges))
+    case actions.COURSE_PICKED:
+      return state.set('courseId', action.id)
     default:
       return state
   }

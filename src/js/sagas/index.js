@@ -1,6 +1,8 @@
-import { takeLatest, put, call } from 'redux-saga/effects'
+import { takeLatest, put, call, select } from 'redux-saga/effects'
 import { actions } from '../constants'
-import { coursesFetched } from '../actionCreators'
+import { challengesFetched, coursesFetched } from '../actionCreators'
+
+const BASE_URL = 'http://localhost:3000'
 
 const fetchJson = async (...args) => {
   const res = await fetch(...args)
@@ -8,11 +10,19 @@ const fetchJson = async (...args) => {
 }
 
 function* fetchCourses() {
-  const courses = yield call(fetchJson, 'http://localhost:3000/courses')
+  const courses = yield call(fetchJson, `${BASE_URL}/courses`)
 
   yield put(coursesFetched(courses))
 }
 
+function* fetchChallenges() {
+  const courseId = yield select(_ => _.get('courseId'))
+  const challenges = yield call(fetchJson, `${BASE_URL}/courses/${courseId}/challenges`)
+
+  yield put(challengesFetched(challenges))
+}
+
 export default function* rootSaga() {
   yield takeLatest(actions.COURSES_FETCH_REQUESTED, fetchCourses)
+  yield takeLatest(actions.CHALLENGES_FETCH_REQUESTED, fetchChallenges)
 }
