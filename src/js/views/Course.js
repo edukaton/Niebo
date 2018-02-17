@@ -1,8 +1,8 @@
 import Preact from 'preact'
 import { connect } from 'react-redux'
 
-import { challengesFetchedRequested } from '../actionCreators'
-import Challenge from './Challenge'
+import { challengesFetchedRequested, challengePicked } from '../actionCreators'
+import ChallengeLink from '../components/ChallengeLink'
 
 class Course extends Preact.Component {
   componentDidMount() {
@@ -10,7 +10,17 @@ class Course extends Preact.Component {
   }
 
   renderChallenges() {
-    return this.props.challenges.map(({ title, id }) => <Challenge id={id} title={title} />)
+    const { challenges, actions } = this.props
+
+    return challenges.map(
+      ({ name, id, courseId }) =>
+        (<ChallengeLink
+          id={id}
+          courseId={courseId}
+          name={name}
+          onClick={() => actions.pickChallenge(id)}
+        />)
+    )
   }
 
   render() {
@@ -26,7 +36,8 @@ const mapStateToProps = state => ({
 
 const mapActionsToProps = dispatch => ({
   actions: {
-    requestFetchChallenges: () => dispatch(challengesFetchedRequested())
+    requestFetchChallenges: () => dispatch(challengesFetchedRequested()),
+    pickChallenge: id => dispatch(challengePicked(id))
   }
 })
 

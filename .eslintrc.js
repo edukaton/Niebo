@@ -38,6 +38,9 @@ module.exports = {
     "no-mixed-operators": ["error", {"allowSamePrecedence": true}],
     "semi": 0,
     "import/prefer-default-export": 0,
-    "comma-dangle": ["error", "never"]
+    "comma-dangle": ["error", "never"],
+    "jsx-a11y/anchor-is-valid": ["error", "never"],
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/no-static-element-interactions": 0 
   }
 }

@@ -22,3 +22,8 @@ export const coursePicked = id => ({
   type: actions.COURSE_PICKED,
   id
 })
+
+export const challengePicked = id => ({
+  type: actions.CHALLENGE_PICKED,
+  id
+})

@@ -5,17 +5,17 @@
         { "id": "3", "name": "Course #3" }
     ],
     "challenges": [
-        {"id": "1", "title": "Title 1", "courseId": 1},
-        {"id": "2", "title": "Title 2", "courseId": 1},
-        {"id": "3", "title": "Title 3", "courseId": 1},
-        {"id": "4", "title": "Title 4", "courseId": 1},
-        {"id": "5", "title": "Title 5", "courseId": 2},
-        {"id": "6", "title": "Title 6", "courseId": 2},
-        {"id": "7", "title": "Title 7", "courseId": 2},
-        {"id": "8", "title": "Title 8", "courseId": 2},
-        {"id": "9", "title": "Title 9", "courseId": 3 },
-        {"id": "10", "title": "Title 10", "courseId": 3 },
-        {"id": "11", "title": "Title 11", "courseId": 3 },
-        {"id": "12", "title": "Title 12", "courseId": 3 }
+        {"id": "1", "name": "name 1", "courseId": 1},
+        {"id": "2", "name": "name 2", "courseId": 1},
+        {"id": "3", "name": "name 3", "courseId": 1},
+        {"id": "4", "name": "name 4", "courseId": 1},
+        {"id": "5", "name": "name 5", "courseId": 2},
+        {"id": "6", "name": "name 6", "courseId": 2},
+        {"id": "7", "name": "name 7", "courseId": 2},
+        {"id": "8", "name": "name 8", "courseId": 2},
+        {"id": "9", "name": "name 9", "courseId": 3 },
+        {"id": "10", "name": "name 10", "courseId": 3 },
+        {"id": "11", "name": "name 11", "courseId": 3 },
+        {"id": "12", "name": "name 12", "courseId": 3 }
     ]
 }
