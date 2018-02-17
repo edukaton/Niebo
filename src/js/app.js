@@ -5,12 +5,12 @@ import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import createSagaMiddleware from 'redux-saga'
 import logger from 'redux-logger'
+import { BrowserRouter } from 'react-router-dom'
 
 import reducer from './reducer'
 import rootSaga from './sagas'
 
 import App from './views/App'
-import { BrowserRouter } from 'react-router-dom'
 
 
 const sagaMiddleware = createSagaMiddleware()

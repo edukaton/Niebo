@@ -1,7 +1,42 @@
 import Preact from 'preact'
+import { connect } from 'react-redux'
+import CourseLink from '../components/CourseLink'
 
-const LandingPage = () => (
-  <div>Landing</div>
-)
+import { coursesFetchedRequested, coursePicked } from '../actionCreators'
 
-export default LandingPage
+class LandingPage extends Preact.Component {
+  componentDidMount() {
+    this.props.actions.requestFetchCourses()
+  }
+
+  renderCourses() {
+    const { courses, actions } = this.props
+
+    return courses.map(
+      ({ id, name }) =>
+        <CourseLink id={id} name={name} onClick={() => actions.pickCourse(id)} />
+    )
+  }
+
+  render() {
+    return (
+      <div>{this.renderCourses()}</div>
+    )
+  }
+}
+
+const mapStateToProps = state => ({
+  courses: state.get('courses').toArray()
+})
+
+const mapActionsToProps = dispatch => ({
+  actions: {
+    requestFetchCourses: () => dispatch(coursesFetchedRequested()),
+    pickCourse: id => dispatch(coursePicked(id))
+  }
+})
+
+export default connect(
+  mapStateToProps,
+  mapActionsToProps
+)(LandingPage)
