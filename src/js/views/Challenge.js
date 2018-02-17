@@ -3,20 +3,19 @@ import { connect } from 'react-redux'
 
 class Challenge extends Preact.Component {
   componentDidMount() {
-
+    // TODO fetch challenge
   }
 
   render() {
-    const { id, title } = this.props
-
+    const { id } = this.props
     return (
-      <div>{id}{' '}{title}</div>
+      <div>Challenge #{id}</div>
     )
   }
 }
 
-const mapStateToProps = () => ({
-
+const mapStateToProps = state => ({
+  id: state.get('challengeId')
 })
 
 const mapActionsToProps = () => ({
@@ -28,8 +27,3 @@ export default connect(
   mapStateToProps,
   mapActionsToProps
 )(Challenge)
-
-
-// const Course = (props) => (
-//   <div>{props.match.params.id}</div>
-// )

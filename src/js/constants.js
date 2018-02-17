@@ -5,5 +5,6 @@ export const actions = createConstants(
   'COURSES_FETCHED',
   'CHALLENGES_FETCH_REQUESTED',
   'CHALLENGES_FETCHED',
-  'COURSE_PICKED'
+  'COURSE_PICKED',
+  'CHALLENGE_PICKED'
 )
