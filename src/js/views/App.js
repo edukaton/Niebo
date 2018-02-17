@@ -1,25 +1,22 @@
 import Preact from 'preact'
-
 import { connect } from 'react-redux'
+import { Switch, Route } from 'react-router'
+
+import LandingPage from './LandingPage'
+import Course from './Course'
 
 import { coursesFetchedRequested } from '../actionCreators'
-
 
 class App extends Preact.Component {
   componentDidMount() {
     this.props.actions.requestFetchCourses()
   }
   render() {
-    const { courses } = this.props
-
     return (
-      <div>
-        {
-          courses.map(course => (
-            <div>{course.name}</div>
-          ))
-        }
-      </div>
+      <Switch>
+        <Route path="/" exact component={LandingPage} />
+        <Route path="/course" component={Course} />
+      </Switch>
     )
   }
 }

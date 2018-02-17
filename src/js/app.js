@@ -10,6 +10,8 @@ import reducer from './reducer'
 import rootSaga from './sagas'
 
 import App from './views/App'
+import { BrowserRouter } from 'react-router-dom'
+
 
 const sagaMiddleware = createSagaMiddleware()
 
@@ -25,6 +27,8 @@ sagaMiddleware.run(rootSaga)
 
 Preact.render(
   <Provider store={store}>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </Provider>
   , document.getElementById('app'))
