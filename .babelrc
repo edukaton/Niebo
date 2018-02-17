@@ -1,0 +1,11 @@
+{
+  "presets": [
+    "babel-preset-env",
+    "react",
+    "stage-0"
+  ],
+  "plugins": [
+    ["transform-react-jsx", { "pragma":"Preact.h" }],
+    "transform-regenerator"
+  ]
+}
