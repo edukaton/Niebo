@@ -13,12 +13,14 @@ class Course extends Preact.Component {
     const { challenges, actions } = this.props
 
     return challenges.map(
-      ({ name, id, courseId }) =>
+      ({
+        name, id, courseId, type
+      }) =>
         (<ChallengeLink
           id={id}
           courseId={courseId}
           name={name}
-          onClick={() => actions.pickChallenge(id)}
+          onClick={() => actions.pickChallenge(type)}
         />)
     )
   }
@@ -37,7 +39,7 @@ const mapStateToProps = state => ({
 const mapActionsToProps = dispatch => ({
   actions: {
     requestFetchChallenges: () => dispatch(challengesFetchedRequested()),
-    pickChallenge: id => dispatch(challengePicked(id))
+    pickChallenge: type => dispatch(challengePicked(type))
   }
 })
 
