@@ -9,7 +9,7 @@ export const story = {
     'Nad przyczynami tego stanu rzeczy pracując już psychologowie, którzy weszli do wytypowanych do pilotażu projektu „Marsz do szkoły!” i przeprowadzają pogłębione wywiady z uczniami.',
     'Wyniki działań specjalistów oraz efekty projektu poznamy już za 2 miesiące.'
   ],
-  img: 'forest'
+  img: 'sql'
 }
 
 export const form = {
