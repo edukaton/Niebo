@@ -2,7 +2,7 @@ import { takeLatest, put, call, select } from 'redux-saga/effects'
 import { actions } from '../constants'
 import { challengesFetched, coursesFetched } from '../actionCreators'
 
-const BASE_URL = 'http://localhost:3000'
+const BASE_URL = '/api'
 
 const fetchJson = async (...args) => {
   const res = await fetch(...args)
