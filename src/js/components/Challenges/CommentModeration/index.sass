@@ -8,7 +8,7 @@ body
 
 .thread
   padding: 16px
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)  
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
   border-radius: 2px
   position: relative
   overflow: hidden
@@ -67,6 +67,7 @@ body
   border-top-width: 0px
 
 .comments-name
+  font-weight: bold
   margin-bottom: 8px
 
 .comment
@@ -75,7 +76,7 @@ body
   border-radius: 8px
   margin-bottom: 8px
   .comment-content
-    padding: 8px
+    padding-top: 8px
     &[contenteditable]
       border: 2px solid #ef5350
       outline: 0
@@ -88,6 +89,9 @@ body
         border-color: #4caf50
         &:focus
           border-color: #4caf50
+
+.comment-author
+  font-weight: bold
 
 .controls-container
   width: 100%
@@ -142,7 +146,6 @@ body
   100%
     transform: translateY(0%) scale(1)
 
-
 @keyframes fade-in
   0%
     opacity: 0
@@ -150,14 +153,12 @@ body
   100%
     opacity: 1
 
-
 @keyframes slide-out
   0%
     transform: translateX(0)
 
   100%
     transform: translateX(-100vw)
-
 
 @keyframes slide-in
   0%

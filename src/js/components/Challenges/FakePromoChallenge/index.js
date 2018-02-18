@@ -26,17 +26,18 @@ export default class FakePromoChallenge extends Preact.Component {
       this.setState({ view: this.state.view + 1 })
     }
     renderView() {
-      const { view } = this.state
-      switch (view) {
-        case views.INTRO:
-          return <Intro />
-        case views.FORM:
-          return <Form content={form} />
-        case views.SUMMING_UP:
-          return <SumUp />
-        default:
-          return <p>No view for: {view}</p>
-      }
+      // const { view } = this.state;
+      return <Form content={form} />
+      // switch (view) {
+      //   case views.INTRO:
+      //     return <Intro />
+      //   case views.FORM:
+      //     return <Form content={form} />
+      //   case views.SUMMING_UP:
+      //     return <SumUp />
+      //   default:
+      //     return <p>No view for: {view}</p>
+      // }
     }
     render() {
       console.log(this.state.view)
