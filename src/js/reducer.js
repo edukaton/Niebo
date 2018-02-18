@@ -23,11 +23,11 @@ const reducer = (state = defaultState, action) => {
     case actions.CHALLENGES_FETCHED:
       return state.set('challenges', List(action.challenges))
     case actions.COURSE_PICKED:
-      return state.set('courseId', action.id)
+      return state.set('courseId', +action.id)
     case actions.CHALLENGE_PICKED:
       return state
         .set('challengeType', state.get('challenges').get(action.id - 1).type)
-        .set('challengeId', action.id)
+        .set('challengeId', +action.id)
     default:
       return state
   }

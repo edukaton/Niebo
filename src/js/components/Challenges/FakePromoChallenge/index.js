@@ -1,7 +1,6 @@
 import Preact from 'preact'
 import Intro from './Intro'
 import Form from './Form'
-import Challenge from './Challenge'
 import SumUp from './SumUp'
 import { form } from './constants'
 
@@ -31,8 +30,6 @@ export default class FakePromoChallenge extends Preact.Component {
       switch (view) {
         case views.INTRO:
           return <Intro />
-        case views.CHALLENGE:
-          return <Challenge />
         case views.FORM:
           return <Form content={form} />
         case views.SUMMING_UP:
@@ -46,7 +43,6 @@ export default class FakePromoChallenge extends Preact.Component {
       return (
         <div className="fake-promo-challenge">
           <header className="fake-promo-challenge">
-            <h1>Wyzwanie #4</h1>
             <h2>Przeanalizuj post</h2>
           </header>
           {this.renderView()}

@@ -52,7 +52,12 @@ export default class StoryChallenge extends Preact.Component {
           {this.renderView()}
           <div className="btns-container">
             <Button onClick={this.previousView} disabled={this.state.view === 0}>Cofnij</Button>
-            <Button onClick={this.nextView} disabled={this.state.view === Object.keys(views).length - 1}>Dalej</Button>
+            <Button
+              onClick={this.nextView}
+              disabled={this.state.view === Object.keys(views).length - 1}
+            >
+            Dalej
+            </Button>
           </div>
         </div>
       )
