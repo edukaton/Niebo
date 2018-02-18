@@ -18,11 +18,10 @@ const Form = ({content}) => (
     <div className="fake-promo-challenge--form thread">
         <div className="post">
             <div className="post-author">
-                <img className="author-img"
-                     src="https://www.thesun.co.uk/wp-content/uploads/2017/03/nintchdbpict000139419726.jpg?strip=all&w=871"></img>
-                <span className="author-name">Znany youtuber</span>
+                <img className="z_dupy_post_header-img" src="/z_dupy_post_header.png"></img>
             </div>
             <div className="post-content">{content.question}</div>
+            <img className="z_dupy_post_footer-img" src="/z_dupy_post_footer.png"></img>
         </div>
         <div>
             <div className="comments">
