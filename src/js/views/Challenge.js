@@ -28,7 +28,7 @@ const Challenge = ({
   <ChallengeWrapper
     id={id}
     prevBtnDisabled={id === 1}
-    nextBtnDisabled={id === challengesCount - 1}
+    nextBtnDisabled={id === challengesCount}
     prevBtnCb={() => actions.previousChallenge(id)}
     nextBtnCb={() => actions.nextChallenge(id)}
   >
