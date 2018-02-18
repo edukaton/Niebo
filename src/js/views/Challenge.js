@@ -4,8 +4,10 @@ import StoryChallenge from '../components/Challenges/StoryChallenge'
 import CommentModeration from '../components/Challenges/CommentModeration'
 import FakeNewsChecklist from '../components/Challenges/FakeNewsChecklist'
 import FakePromoChallenge from '../components/Challenges/FakePromoChallenge'
+import ChallengeWrapper from '../components/ChallangeWrapper'
+import { challengePicked } from '../actionCreators';
 
-const Challenge = ({ type }) => {
+function renderChallenge(type) {
   switch (type) {
     case 'comment_moderation':
       return <CommentModeration />
@@ -20,10 +22,34 @@ const Challenge = ({ type }) => {
   }
 }
 
+const Challenge = ({
+  type, id, challengesCount, actions
+}) => (
+  <ChallengeWrapper
+    id={id}
+    prevBtnDisabled={id === 1}
+    nextBtnDisabled={id === challengesCount - 1}
+    prevBtnCb={() => actions.previousChallenge(id)}
+    nextBtnCb={() => actions.nextChallenge(id)}
+  >
+    {renderChallenge(type)}
+  </ChallengeWrapper>
+)
+
 const mapStateToProps = state => ({
-  type: state.get('challengeType')
+  type: state.get('challengeType'),
+  id: state.get('challengeId'),
+  challengesCount: state.get('challenges').size
+})
+
+const mapActionsToProps = dispatch => ({
+  actions: {
+    previousChallenge: id => dispatch(challengePicked(id - 1)),
+    nextChallenge: id => dispatch(challengePicked(id + 1))
+  }
 })
 
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapActionsToProps
 )(Challenge)

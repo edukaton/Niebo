@@ -6,30 +6,10 @@ body
   &.fade
     animation: fade-in 0.5s ease-in-out reverse, fade-in 0.5s 0.5s ease-in-out forwards
 
-.container
-  display: flex
-  align-items: center
-  justify-content: center
-  flex-direction: column
-  width: 75%
-  margin: 0 auto
-  > *
-    width: 100%
-    box-sizing: border-box
-
-@media (max-width: 576px)
-  .container
-    width: 100%
-    padding: 0 8px
-    box-sizing: border-box
-
-h4
-  font-weight: normal
-
 .thread
   padding: 16px
-  border: 2px solid black
-  border-radius: 8px
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)  
+  border-radius: 2px
   position: relative
   overflow: hidden
   &.slide
@@ -60,10 +40,11 @@ h4
   flex-direction: column
 
 .post
-  border: 1px solid black
   padding: 12px
   border-radius: 2px
   border-bottom-style: dashed
+  border-width: 1px
+  border-color: black
 
 .post-author
   display: flex
@@ -81,7 +62,6 @@ h4
   margin-top: 8px
 
 .comments
-  border: 1px solid black
   padding: 12px
   border-radius: 2px
   border-top-width: 0px

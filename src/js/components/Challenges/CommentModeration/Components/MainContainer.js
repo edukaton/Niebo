@@ -15,7 +15,6 @@ const MainContainer = ({
 }) => (
   <div className="container">
     <div className="headers-container" id="headersContainer">
-      <h1>Wyzwanie #1</h1>
       <h4>Zedytuj komentarz tak by nie zawierał żadnych obraźliwych zdań.</h4>
     </div>
     <Thread
@@ -30,16 +29,18 @@ const MainContainer = ({
       <button
         className="btn moderate-btn"
         disabled={disableModerateButton}
-        onClick={moderateComment} >
+        onClick={moderateComment}
+      >
         Zacznij edycję
       </button>
       <button
         className="btn next-btn"
         disabled={disableCheckButton}
-        onClick={checkModeratedComment} >
+        onClick={checkModeratedComment}
+      >
         Sprawdź
       </button>
-   </div>
+    </div>
   </div>
 )
 

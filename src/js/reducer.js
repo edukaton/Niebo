@@ -8,7 +8,8 @@ const defaultState = Map({
   challengesLoading: false,
   challenges: List(),
   courseId: null,
-  challengeType: null
+  challengeType: null,
+  challengeId: null
 })
 
 const reducer = (state = defaultState, action) => {
@@ -24,7 +25,9 @@ const reducer = (state = defaultState, action) => {
     case actions.COURSE_PICKED:
       return state.set('courseId', action.id)
     case actions.CHALLENGE_PICKED:
-      return state.set('challengeType', action.challengeType)
+      return state
+        .set('challengeType', state.get('challenges').get(action.id - 1).type)
+        .set('challengeId', action.id)
     default:
       return state
   }
