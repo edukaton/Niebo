@@ -44,12 +44,10 @@ export default class StoryChallenge extends Preact.Component {
       }
     }
     render() {
-      console.log(this.state.view === 0)
       return (
         <div className="story-challenge">
           <header className="story-challenge">
-            <h1>Wyzwanie #2</h1>
-            <h2>Przeczytaj artykuł i odpowiedz na pytania</h2>
+            <h4>Przeczytaj artykuł i odpowiedz na pytania</h4>
           </header>
           {this.renderView()}
           <div className="btns-container">
