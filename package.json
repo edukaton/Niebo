@@ -30,7 +30,7 @@
     "clean": "rimraf dist",
     "build": "npm run clean && cross-env NODE_ENV=production webpack --config ./build/webpack.prod.js -p --progress --hide-modules",
     "monitor": "npm run clean && cross-env NODE_ENV=production MONITOR=true webpack --config ./build/webpack.prod.js -p --progress --hide-modules",
-    "backend": "json-server --watch db.json"
+    "backend": "node ./server/index.js"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
