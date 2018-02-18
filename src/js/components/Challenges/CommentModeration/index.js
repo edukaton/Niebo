@@ -1,6 +1,8 @@
 import Preact from 'preact'
 import './index.sass'
 import MainContainer from './Components/MainContainer'
+import Thread from './Components/Thread'
+import Controls from './Components/Controls'
 
 class CommentModeration extends Preact.Component {
   state = {
@@ -65,18 +67,26 @@ class CommentModeration extends Preact.Component {
     } = this.state
 
     return (
-      <MainContainer
-        disableCheckButton={disableCheckButton}
-        disableModerateButton={disableModerateButton}
-        contenteditable={contenteditable}
-        moderatedCommentContent={moderatedCommentContent}
-        approved={approved}
-        threadComplete={threadComplete}
-        moderateComment={this.moderateComment}
-        checkModeratedComment={this.checkModeratedComment}
-        setModerateCommentRef={this.setModerateCommentRef}
-        compareComments={this.compareComments}
-      />
+      <div>
+        <MainContainer
+          threadComplete={threadComplete}
+        />
+        <Thread
+          contenteditable={contenteditable}
+          moderatedCommentContent={moderatedCommentContent}
+          approved={approved}
+          threadComplete={threadComplete}
+          setModerateCommentRef={this.setModerateCommentRef}
+          compareComments={this.compareComments}
+          moderateComment={this.moderateComment}
+        />
+        <Controls
+          disableCheckButton={disableCheckButton}
+          disableModerateButton={disableModerateButton}
+          moderateComment={this.moderateComment}
+          checkModeratedComment={this.checkModeratedComment}
+        />
+      </div>
     )
   }
 }
