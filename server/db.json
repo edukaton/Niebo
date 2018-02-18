@@ -4,9 +4,9 @@
         { "id": "2", "name": "Kurs zaawansowany"}
     ],
     "challenges": [
-        {"id": "1", "name": "Comment Moderation", "courseId": 1, "type": "comment_moderation"},
-        {"id": "2", "name": "Story Challenge", "courseId": 1, "type": "story_challenge"},
+        {"id": "1", "name": "Komentuj z głową", "courseId": 1, "type": "comment_moderation"},
+        {"id": "2", "name": "Pół prawdy to całe kłamstwo", "courseId": 1, "type": "story_challenge"},
         {"id": "3", "name": "Fake News Checklist", "courseId": 1, "type": "fake_news_checklist"},
-        {"id": "4", "name": "FakePromoChallenge", "courseId": 1, "type": "fake_promo_challenge"}
+        {"id": "4", "name": "Tyleee info", "courseId": 1, "type": "fake_promo_challenge"}
     ]
 }
