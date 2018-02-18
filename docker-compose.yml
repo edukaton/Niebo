@@ -1,7 +1,7 @@
 version: "3"
 services:
   web:
-    image: edukaton:latest
+    image: niebo:latest
     deploy:
       replicas: 5
       resources:
