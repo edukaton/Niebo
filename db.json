@@ -5,9 +5,8 @@
     ],
     "challenges": [
         {"id": "1", "name": "Comment Moderation", "courseId": 1, "type": "comment_moderation"},
-        {"id": "2", "name": "name 2", "courseId": 1, "type": "type2"},
-        {"id": "3", "name": "name 3", "courseId": 1, "type": "type3"},
-        {"id": "4", "name": "name 4", "courseId": 1, "type": "type4"},
-        {"id": "5", "name": "name 5", "courseId": 1, "type": "type5"}
+        {"id": "2", "name": "Story Challenge", "courseId": 1, "type": "story_challenge"},
+        {"id": "3", "name": "Fake News Checklist", "courseId": 1, "type": "fake_news_checklist"},
+        {"id": "4", "name": "FakePromoChallenge", "courseId": 1, "type": "fake_promo_challenge"}
     ]
 }
