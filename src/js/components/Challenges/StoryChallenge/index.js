@@ -19,9 +19,11 @@ export default class StoryChallenge extends Preact.Component {
       view: views.PART_1
     }
     previousView = () => {
+      window.scrollTo(0, 0)
       this.setState({ view: this.state.view - 1 })
     }
     nextView = () => {
+      window.scrollTo(0, 0)
       this.setState({ view: this.state.view + 1 })
     }
     renderView() {

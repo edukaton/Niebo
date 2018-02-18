@@ -29,6 +29,7 @@ class Thread extends Preact.Component {
           </div>
           <div className="comment">
             <div className="comment-author">Tomek</div>
+            {contenteditable && <div className="comment-tip">Usuń obrażający odbiorcę fragment komentarza.</div>}
             <div
               className={commentContentClass}
               contentEditable={contenteditable}

@@ -25,8 +25,8 @@ class Form extends Preact.Component {
   }
   onRadioClick = (e, i) => {
     e.preventDefault()
-    const checkedIndexes = [...this.state.checkedIndexes]
-    checkedIndexes[i] = !checkedIndexes[i]
+    const checkedIndexes = this.state.checkedIndexes.map(() => false)
+    checkedIndexes[i] = true
     this.setState({ checkedIndexes })
   }
   render() {
