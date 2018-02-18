@@ -16,7 +16,7 @@ const views = {
 
 export default class StoryChallenge extends Preact.Component {
     state = {
-      view: views.STORY_PART_1
+      view: views.PART_1
     }
     previousView = () => {
       this.setState({ view: this.state.view - 1 })
@@ -27,14 +27,18 @@ export default class StoryChallenge extends Preact.Component {
     renderView() {
       const { view } = this.state
       switch (view) {
-        case views.STORY_PART_1:
-          return <Story content={storyPart1} />
-        case views.FORM_PART_1:
-          return <Form content={formPart1} />
-        case views.STORY_PART_2:
-          return <Story content={storyPart2} />
-        case views.FORM_PART_2:
-          return <Form content={formPart2} />
+        case views.PART_1:
+          return (
+            <div>
+              <Story content={storyPart1} />
+              <Form content={formPart1} index={this.state.view} />
+            </div>)
+        case views.PART_2:
+          return (
+            <div>
+              <Story content={storyPart2} />
+              <Form content={formPart2} index={this.state.view} />
+            </div>)
         case views.SUMMING_UP:
           return <SumUp />
         default:

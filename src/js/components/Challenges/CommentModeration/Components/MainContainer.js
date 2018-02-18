@@ -15,7 +15,7 @@ const MainContainer = ({
 }) => (
   <div className="container">
     <div className="headers-container" id="headersContainer">
-      <h4>Usuń zdanie tak by komentarz nie zawierał zdań obrażających odbiorcę.</h4>
+      <h4>{!threadComplete ? 'Usuń fragment komentarza obrażający odbiorcę.' : 'Gratulacje!'}</h4>
     </div>
     <Thread
       contenteditable={contenteditable}
@@ -24,6 +24,7 @@ const MainContainer = ({
       threadComplete={threadComplete}
       setModerateCommentRef={setModerateCommentRef}
       compareComments={compareComments}
+      moderateComment={moderateComment}
     />
     <div className="controls-container">
       <button

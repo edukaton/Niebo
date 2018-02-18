@@ -18,7 +18,6 @@ class CommentModeration extends Preact.Component {
 
   moderateComment = () => {
     this.setState({
-      disableCheckButton: false,
       disableModerateButton: true,
       contenteditable: true
     }, () => {
