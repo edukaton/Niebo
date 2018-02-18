@@ -12,6 +12,10 @@ class CommentModeration extends Preact.Component {
     threadComplete: false
   }
 
+  setModerateCommentRef = (ref) => {
+    this.moderateCommentRef = ref
+  }
+
   moderateComment = () => {
     this.setState({
       disableCheckButton: false,
@@ -22,19 +26,15 @@ class CommentModeration extends Preact.Component {
     })
   }
 
-  setModerateCommentRef = ref => {
-    this.moderateCommentRef = ref
-  }
-
   compareComments = () => {
-    const {innerText} = this.moderateCommentRef
+    const { innerText } = this.moderateCommentRef
     const contentAfterModeration = 'Film to dno! Nie podobało mi się jak twórcy liczyli na naiwność widza.'
 
     this.setState({
       moderatedCommentContent: innerText
     })
 
-    if(innerText.replace(/\s/g, "") === contentAfterModeration.replace(/\s/g, "")) {
+    if (innerText.replace(/\s/g, '') === contentAfterModeration.replace(/\s/g, '')) {
       this.setState({
         disableCheckButton: false,
         approved: true
@@ -44,7 +44,7 @@ class CommentModeration extends Preact.Component {
         disableCheckButton: true,
         approved: false
       })
-   }
+    }
   }
 
   checkModeratedComment = () => {
@@ -77,7 +77,7 @@ class CommentModeration extends Preact.Component {
         checkModeratedComment={this.checkModeratedComment}
         setModerateCommentRef={this.setModerateCommentRef}
         compareComments={this.compareComments}
-        />
+      />
     )
   }
 }

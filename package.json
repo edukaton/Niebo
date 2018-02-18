@@ -15,7 +15,8 @@
       {
         "href": "/favicon.ico",
         "rel": "icon"
-      }
+      },
+      "https://fonts.googleapis.com/css?family=Lato"
     ],
     "lang": "en-US",
     "appMountId": "app"
