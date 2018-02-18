@@ -28,8 +28,7 @@ class Thread extends Preact.Component {
           <div className="comments-name">Komentarze:</div>
           <div className="comment">
             <div className="comment-author">Jacek</div>
-            <div className="comment-content">Jak dla mnie super! Świetna historia i jeszcze lepsze piosenki niż w części pierwszej.
-            </div>
+            <div className="comment-content">Jak dla mnie super! Świetna historia.</div>
           </div>
           <div className="comment">
             <div className="comment-author">Tomek</div>
@@ -40,6 +39,11 @@ class Thread extends Preact.Component {
               onInput={compareComments}
               onDblClick={moderateComment}
             >{moderatedCommentContent}
+            </div>
+          </div>
+          <div className="comment">
+            <div className="comment-author">Grzegorz</div>
+            <div className="comment-content">Jako fan GW stwierdzam, że film jest beznadziejny. Jak nigdy chciałem z niego wyjść. Bez fabuły, emocji, tego, co było mocną stroną tej serii. Może dlatego, że robił go Disney i zrobili chłam dla dzieci. Filmu nie polecam, chociaż fani tacy jak ja, na pewno go nie odpuszczą - i na to chyba liczyli jego twórcy. Szok i niedowierzanie.
             </div>
           </div>
         </div>
