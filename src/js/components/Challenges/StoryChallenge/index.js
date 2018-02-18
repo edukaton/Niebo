@@ -9,11 +9,9 @@ import './index.sass'
 
 
 const views = {
-  STORY_PART_1: 0,
-  FORM_PART_1: 1,
-  STORY_PART_2: 2,
-  FORM_PART_2: 3,
-  SUMMING_UP: 4
+  PART_1: 0,
+  PART_2: 1,
+  SUMMING_UP: 2
 }
 
 export default class StoryChallenge extends Preact.Component {
@@ -47,7 +45,7 @@ export default class StoryChallenge extends Preact.Component {
       return (
         <div className="story-challenge">
           <header className="story-challenge">
-            <h4>Przeczytaj artykuł i odpowiedz na pytania</h4>
+            <h4>{this.state.view !== views.SUMMING_UP ? 'Przeczytaj artykuł i odpowiedz na pytania' : 'Podsumowanie zadania:'}</h4>
           </header>
           {this.renderView()}
           <div className="btns-container">

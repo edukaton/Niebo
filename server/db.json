@@ -1,7 +1,7 @@
 {
     "courses": [
-        { "id": "1", "name": "Course #1" },
-        { "id": "2", "name": "Course #2" }
+        { "id": "1", "name": "Kurs podstawowy" },
+        { "id": "2", "name": "Kurs zaawansowany"}
     ],
     "challenges": [
         {"id": "1", "name": "Comment Moderation", "courseId": 1, "type": "comment_moderation"},

@@ -15,7 +15,7 @@ const MainContainer = ({
 }) => (
   <div className="container">
     <div className="headers-container" id="headersContainer">
-      <h4>Zedytuj komentarz tak by nie zawierał żadnych obraźliwych zdań.</h4>
+      <h4>Usuń zdanie tak by komentarz nie zawierał zdań obrażających odbiorcę.</h4>
     </div>
     <Thread
       contenteditable={contenteditable}

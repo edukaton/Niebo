@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 
 import { challengesFetchedRequested, challengePicked } from '../actionCreators'
 import ChallengeLink from '../components/ChallengeLink'
+import CourseWrapper from '../components/CourseWrapper'
 
 class Course extends Preact.Component {
   componentDidMount() {
@@ -27,7 +28,7 @@ class Course extends Preact.Component {
 
   render() {
     return (
-      <div>{this.renderChallenges()}</div>
+      <CourseWrapper>{this.renderChallenges()}</CourseWrapper>
     )
   }
 }

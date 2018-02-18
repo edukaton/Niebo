@@ -1,7 +1,7 @@
 import Preact from 'preact'
 import { connect } from 'react-redux'
 import CourseLink from '../components/CourseLink'
-
+import LandingPageWrapper from '../components/LandingPageWrapper'
 import { coursesFetchedRequested, coursePicked } from '../actionCreators'
 
 class LandingPage extends Preact.Component {
@@ -20,7 +20,7 @@ class LandingPage extends Preact.Component {
 
   render() {
     return (
-      <div>{this.renderCourses()}</div>
+      <LandingPageWrapper>{this.renderCourses()}</LandingPageWrapper>
     )
   }
 }
