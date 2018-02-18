@@ -21,6 +21,7 @@ const Form = ({content}) => (
                 <img className="z_dupy_post_header-img" src="/z_dupy_post_header.png"></img>
             </div>
             <div className="post-content">{content.question}</div>
+            <img className="z_dupy_koszulka-img" src="/z_dupy_koszulka.png"></img>
             <img className="z_dupy_post_footer-img" src="/z_dupy_post_footer.png"></img>
         </div>
         <div>
