@@ -14,7 +14,7 @@ const Form = ({ content }) => (
       {content.question}
     </h4>
     <div>
-      {content.options.map((_, i) => <Checkbox data={_} index={i} />)}
+      {content.options.map((text, i) => <Checkbox data={text} index={i} />)}
     </div>
   </div>
 )
