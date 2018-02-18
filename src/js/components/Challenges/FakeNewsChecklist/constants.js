@@ -1,13 +1,8 @@
 export const story = {
   header: 'Dramat w polskiej szkole',
-  date: 'dzisiaj 10:25',
+  description: 'Od dwóch miesięcy w dziesięciu wybranych podstawówkach w Wielkopolsce realizowany jest projekt „Marsz do szkoły!”, który ma na celu przeciwdziałanie problemowi nagminnego opuszczania zajęć szkolnych przez najstarszych uczniów szkół podstawowych.',
   body: [
-    'Od dwóch miesięcy w dziesięciu wybranych podstawówkach w Wielkopolsce realizowany jest projekt „Marsz do szkoły!”, który ma na celu przeciwdziałanie problemowi nagminnego opuszczania zajęć szkolnych przez najstarszych uczniów szkół podstawowych.',
-    '(tImię i nazwisko/Nick - zaciągnięte z FB)….. uczy się w 7. klasie w jednej z poznańskich podstawówek. Niestety, nie może być wzorem dla swoich młodszych koleżanek i kolegów z racji swoich nieobecności na lekcjach. W ciągu ostatnich 4 miesięcy było to 80%.',
-    'To właśnie ten przypadek skłonił Wielkopolskie Kuratorium Oświaty do podjęcia zdecydowanych działań zmierzających do wyeliminowania problemu.',
-    'Sytuacja jest poważna, ponieważ nie jest to jednostkowy przykład. Liczba uczniów, która opuszcza zajęcia bez powodu i bez wiedzy rodziców, stale się zwiększa.',
-    'Nad przyczynami tego stanu rzeczy pracując już psychologowie, którzy weszli do wytypowanych do pilotażu projektu „Marsz do szkoły!” i przeprowadzają pogłębione wywiady z uczniami.',
-    'Wyniki działań specjalistów oraz efekty projektu poznamy już za 2 miesiące.'
+    'Jan Kowalski uczy się w 7. klasie w jednej z poznańskich podstawówek. Niestety, nie może być wzorem dla swoich młodszych koleżanek i kolegów z racji swoich nieobecności na lekcjach. W ciągu ostatnich 4 miesięcy było to 80%. To właśnie ten przypadek skłonił Wielkopolskie Kuratorium Oświaty do podjęcia zdecydowanych działań zmierzających do wyeliminowania problemu. Sytuacja jest poważna, ponieważ nie jest to jednostkowy przykład. Liczba uczniów, która opuszcza zajęcia bez powodu i bez wiedzy rodziców, stale się zwiększa. Nad przyczynami tego stanu rzeczy pracując już psychologowie, którzy weszli do wytypowanych do pilotażu projektu „Marsz do szkoły!” i przeprowadzają pogłębione wywiady z uczniami. Wyniki działań specjalistów oraz efekty projektu poznamy już za 2 miesiące.'
   ],
   img: 'sql'
 }
