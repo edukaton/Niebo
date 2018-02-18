@@ -32,7 +32,7 @@ const Form = ({content}) => (
                         <Checkbox index={i}/>
                         <div className="comment-body">
                             <div className="comment-author">{commentAuthor()}</div>
-                            <div className="comment-content">
+                            <div className="comment-content comment-content--not-editable">
                                 <div className="comment-content__text">{text}</div>
                             </div>
                         </div>
