@@ -36,6 +36,11 @@ server.use("/api", (req, res, next) => {
 server.use("/api", router);
 
 server.use(express.static("dist"));
+
+server.get('*', function (request, response) {
+  response.sendFile(path.resolve(__dirname, '../dist', 'index.html'))
+})
+
 server.listen(3000, () => {
   console.log("JSON Server is running");
 });

@@ -1,6 +1,7 @@
 /* eslint-disable import/no-commonjs, import/no-extraneous-dependencies */
 const autoprefixer = require("autoprefixer");
 const tailwindcss = require("tailwindcss");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = iP => [
   {
